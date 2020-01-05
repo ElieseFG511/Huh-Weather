@@ -110,12 +110,29 @@ function displayData(forecast){
 	$('.weather h2').html(Math.round(forecast.daily.data[0].temperatureLow));
 
 	// for week
-	$('').html(Math.round(forecast.daily.data[1].temperatureLow));
-	$('').html(Math.round(forecast.daily.data[2].temperatureLow));
-	$('').html(Math.round(forecast.daily.data[3].temperatureLow));
-	$('').html(Math.round(forecast.daily.data[4].temperatureLow));
-	$('').html(Math.round(forecast.daily.data[5].temperatureLow));
-	$('').html(Math.round(forecast.daily.data[6].temperatureLow));
+	$('.fut-weath .temp-high .day-1').html(Math.round(forecast.daily.data[1].temperatureHigh));
+	$('.fut-weath .temp-low .day-1').html(Math.round(forecast.daily.data[1].temperatureLow));
+	$('.fut-weath .icon .day-1').html(displayIcon(forecast.daily.data[1].icon));
+
+	$('.fut-weath .temp-high .day-2').html(Math.round(forecast.daily.data[2].temperatureHigh));
+	$('.fut-weath .temp-low .day-2').html(Math.round(forecast.daily.data[2].temperatureLow));
+	$('.fut-weath .icon .day-2').html(displayIcon(forecast.daily.data[2].icon));
+
+	$('.fut-weath .temp-high .day-3').html(Math.round(forecast.daily.data[3].temperatureHigh));
+	$('.fut-weath .temp-low .day-3').html(Math.round(forecast.daily.data[3].temperatureLow));
+	$('.fut-weath .icon .day-3').html(displayIcon(forecast.daily.data[3].icon));
+
+	$('.fut-weath .temp-high .day-4').html(Math.round(forecast.daily.data[4].temperatureHigh));
+	$('.fut-weath .temp-low .day-4').html(Math.round(forecast.daily.data[4].temperatureLow));
+	$('.fut-weath .icon .day-4').html(displayIcon(forecast.daily.data[4].icon));
+	
+	$('.fut-weath .temp-high .day-5').html(Math.round(forecast.daily.data[5].temperatureHigh));
+	$('.fut-weath .temp-low .day-5').html(Math.round(forecast.daily.data[5].temperatureLow));
+	$('.fut-weath .icon .day-5').html(displayIcon(forecast.daily.data[5].icon));
+
+	$('.fut-weath .temp-high .day-6').html(Math.round(forecast.daily.data[6].temperatureHigh));
+	$('.fut-weath .temp-low .day-6').html(Math.round(forecast.daily.data[6].temperatureLow));
+	$('.fut-weath .icon .day-6').html(displayIcon(forecast.daily.data[6].icon));
 
 
 }

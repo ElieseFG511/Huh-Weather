@@ -4,13 +4,22 @@ header {
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
 	.logo {
-		height: 10em;
-		// justify-self: center;
-		// align-self: center;
+		width: 20em;
+		grid-row: 1;
+		justify-self: center;
+		align-self: center;
 	}
-	// button {
-	// 	align-self: end;
-	// 	justify-self: center;
-	// }
 
+	.button {
+		grid-row: 2;
+		justify-self: center;
+		align-self: center;
+		background-color: #E5E5E5;
+		color: #000;
+
+	}
+
+	.button:hover {
+		background-color: #55A6F8;
+	}
 }
