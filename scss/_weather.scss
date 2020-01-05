@@ -1,6 +1,9 @@
 .main-content {
 	display: grid;
 	grid-template-rows: repeat(3, 1fr);
+	.hidden {
+		display: hidden;
+	}	
 	.weather {
 		padding: 2em;
 		display: grid;
@@ -37,6 +40,10 @@
 			grid-column: 2;
 			Justify-self: right;
 		}	
+		p {
+			padding: 0;
+			margin: 0;
+		}
 	}
 
 	.fut-weath {
