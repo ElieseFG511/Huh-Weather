@@ -5,121 +5,94 @@ body {
     background-color: #E0E0E0; }
 
 .hidden {
-  display: hidden; }
+  display: none !important; }
 
-.main-content {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr); }
-  .main-content .hidden {
-    display: hidden; }
-  .main-content .weather {
-    padding: 2em;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr); }
-    .main-content .weather h1 {
-      grid-column: 1;
-      grid-row: 2;
-      align-self: end;
-      justify-self: right;
-      font-size: 4em;
-      margin: 0;
-      line-height: .5em; }
-    .main-content .weather h2 {
-      grid-column: 1;
-      grid-row: 3;
-      justify-self: right;
-      font-size: 4em;
-      margin: 0;
-      color: #ccc; }
-    .main-content .weather .icon {
-      grid-column: 2;
-      grid-row: 2 / span 2;
-      align-self: center; }
-      .main-content .weather .icon img {
-        width: 10em; }
-    .main-content .weather a {
-      grid-row: 1;
-      grid-column: 2;
-      Justify-self: right; }
-    .main-content .weather p {
-      padding: 0;
-      margin: 0; }
-  .main-content .fut-weath {
-    font-size: 2em;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr); }
-    .main-content .fut-weath .temp-low {
-      grid-column: 2; }
-    .main-content .fut-weath .icon {
-      grid-column: 3; }
-
-.main-content {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr); }
-  .main-content .hidden {
-    display: hidden; }
-  .main-content .weather {
-    padding: 2em;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr); }
-    .main-content .weather h1 {
-      grid-column: 1;
-      grid-row: 2;
-      align-self: end;
-      justify-self: right;
-      font-size: 4em;
-      margin: 0;
-      line-height: .5em; }
-    .main-content .weather h2 {
-      grid-column: 1;
-      grid-row: 3;
-      justify-self: right;
-      font-size: 4em;
-      margin: 0;
-      color: #ccc; }
-    .main-content .weather .icon {
-      grid-column: 2;
-      grid-row: 2 / span 2;
-      align-self: center; }
-      .main-content .weather .icon img {
-        width: 10em; }
-    .main-content .weather a {
-      grid-row: 1;
-      grid-column: 2;
-      Justify-self: right; }
-    .main-content .weather p {
-      padding: 0;
-      margin: 0; }
-  .main-content .fut-weath {
-    font-size: 2em;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr); }
-    .main-content .fut-weath .temp-low {
-      grid-column: 2; }
-    .main-content .fut-weath .icon {
-      grid-column: 3; }
-
-header {
+.home {
   height: 100vh;
   background-color: #535353;
   display: grid;
   grid-template-rows: repeat(2, 1fr); }
-  header .logo {
+  .home .logo {
     width: 20em;
     grid-row: 1;
     justify-self: center;
     align-self: center; }
-  header .button {
+  .home .button {
     grid-row: 2;
     justify-self: center;
     align-self: center;
     background-color: #E5E5E5;
     color: #000; }
-  header .button:hover {
+  .home .button:hover {
     background-color: #55A6F8; }
+
+.home {
+  height: 100vh;
+  background-color: #535353;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); }
+  .home .logo {
+    width: 20em;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center; }
+  .home .button {
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    background-color: #E5E5E5;
+    color: #000; }
+  .home .button:hover {
+    background-color: #55A6F8; }
+
+header .main-content {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); }
+  header .main-content .weather {
+    padding: 2em;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); }
+    header .main-content .weather h1 {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: end;
+      justify-self: right;
+      font-size: 4em;
+      margin: 0;
+      line-height: .5em; }
+    header .main-content .weather h2 {
+      grid-column: 1;
+      grid-row: 3;
+      justify-self: right;
+      font-size: 4em;
+      margin: 0;
+      color: #ccc; }
+    header .main-content .weather .icon {
+      grid-column: 2;
+      grid-row: 2 / span 2;
+      align-self: center; }
+      header .main-content .weather .icon img {
+        width: 10em; }
+  header .main-content .button {
+    background-color: #E5E5E5;
+    color: #000;
+    grid-row: 1;
+    grid-column: 2;
+    Justify-self: right; }
+  header .main-content .button:hover {
+    background-color: #55A6F8; }
+  header .main-content p {
+    padding: 0;
+    margin: 0; }
+header .fut-weath {
+  font-size: 2em;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr); }
+  header .fut-weath .temp-low {
+    grid-column: 2; }
+  header .fut-weath .icon {
+    grid-column: 3; }
 
 /*# sourceMappingURL=main.css.map */

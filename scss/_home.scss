@@ -1,25 +1,67 @@
 header {
-	height: 100vh;
-	background-color: #535353;
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	.logo {
-		width: 20em;
-		grid-row: 1;
-		justify-self: center;
-		align-self: center;
-	}
+	.main-content {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);	
+		.weather {
+			padding: 2em;
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+			h1 {
+				grid-column: 1;
+				grid-row: 2;
+				align-self: end;
+				justify-self: right;
+				font-size: 4em;
+				margin: 0;
+				line-height: .5em;
 
-	.button {
-		grid-row: 2;
-		justify-self: center;
-		align-self: center;
-		background-color: #E5E5E5;
-		color: #000;
+			}
+			h2 {
+				grid-column: 1;
+				grid-row: 3;
+				justify-self: right;
+				font-size: 4em;
+				margin: 0;
+				color: #ccc;
+			}
+			.icon {
+				grid-column: 2;
+				grid-row: 2 / span 2;
+				align-self: center;
+				img {
+					width: 10em;
+				}
+			}
 
-	}
+			}
+			.button {
+			background-color: #E5E5E5;
+			color: #000;
+			grid-row: 1;
+			grid-column: 2;
+			Justify-self: right;
+			}
 
-	.button:hover {
-		background-color: #55A6F8;
+			.button:hover {
+				background-color: #55A6F8;
+			}
+			p {
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		.fut-weath {
+			font-size: $weath-font-s;
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
+			.temp-low {
+				grid-column: 2;
+			}
+			.icon {
+				grid-column: 3;
+			}
 	}
 }

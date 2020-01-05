@@ -50,6 +50,13 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 	console.log(forecast);
 });
 
+$('.home .button').click(function(){
+  $('.home').addClass('hidden');
+})
+
+$('.home .button').click(function(){
+  $('header').removeClass('hidden');
+})
 
 /* -----------------------------------------------
    Function for displaying the main weather info
