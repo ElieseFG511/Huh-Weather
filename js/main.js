@@ -34,10 +34,10 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 	// Another way to remove the header is to provide a button and the event
 	// to trigger what happens when the button is clicked (uncomment to use)
 
-	// $('header').append('<a class="button" href="#">Click</a>');
-	// $('header .button').click(function(){
-	//   $('header').hide();
-	// });
+	$('.home').append('<div class="button"><p>Click for your B.S.</p></div>');
+	$('.home .button').click(function(){
+	  $('.home').hide();
+	});
 
 	// The following line calls a function to display
 	// the main weather information. DO NOT EDIT THIS LINE.
@@ -50,13 +50,7 @@ $.getJSON('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/
 	console.log(forecast);
 });
 
-$('.home .button').click(function(){
-  $('.home').addClass('hidden');
-})
 
-$('.home .button').click(function(){
-  $('header').removeClass('hidden');
-})
 
 /* -----------------------------------------------
    Function for displaying the main weather info
@@ -112,34 +106,65 @@ function displayData(forecast){
 
 
 	// Data For Today 
+	$('.weather .day').html(displayDay(0));
 	$('.weather .icon').html(displayIcon(forecast.daily.data[0].icon));
 	$('.weather h1').html(Math.round(forecast.daily.data[0].temperatureHigh));
 	$('.weather h2').html(Math.round(forecast.daily.data[0].temperatureLow));
 
 	// for week
-	$('.fut-weath .temp-high .day-1').html(Math.round(forecast.daily.data[1].temperatureHigh));
-	$('.fut-weath .temp-low .day-1').html(Math.round(forecast.daily.data[1].temperatureLow));
-	$('.fut-weath .icon .day-1').html(displayIcon(forecast.daily.data[1].icon));
+	$('.fut-weath .day-1 .day').html(displayDay(1));
+	$('.fut-weath .day-1 .temp-high').html(Math.round(forecast.daily.data[1].temperatureHigh));
+	$('.fut-weath .day-1 .temp-low').html(Math.round(forecast.daily.data[1].temperatureLow));
+	$('.fut-weath .day-1 .icon').html(displayIcon(forecast.daily.data[1].icon));
 
-	$('.fut-weath .temp-high .day-2').html(Math.round(forecast.daily.data[2].temperatureHigh));
-	$('.fut-weath .temp-low .day-2').html(Math.round(forecast.daily.data[2].temperatureLow));
-	$('.fut-weath .icon .day-2').html(displayIcon(forecast.daily.data[2].icon));
+	$('.fut-weath .day-2 .day').html(displayDay(2));
+	$('.fut-weath .day-2 .temp-high').html(Math.round(forecast.daily.data[2].temperatureHigh));
+	$('.fut-weath .day-2 .temp-low').html(Math.round(forecast.daily.data[2].temperatureLow));
+	$('.fut-weath .day-2 .icon').html(displayIcon(forecast.daily.data[2].icon));
 
-	$('.fut-weath .temp-high .day-3').html(Math.round(forecast.daily.data[3].temperatureHigh));
-	$('.fut-weath .temp-low .day-3').html(Math.round(forecast.daily.data[3].temperatureLow));
-	$('.fut-weath .icon .day-3').html(displayIcon(forecast.daily.data[3].icon));
+	$('.fut-weath .day-3 .day').html(displayDay(3));
+	$('.fut-weath .day-3 .temp-high').html(Math.round(forecast.daily.data[3].temperatureHigh));
+	$('.fut-weath .day-3 .temp-low').html(Math.round(forecast.daily.data[3].temperatureLow));
+	$('.fut-weath .day-3 .icon').html(displayIcon(forecast.daily.data[3].icon));
 
-	$('.fut-weath .temp-high .day-4').html(Math.round(forecast.daily.data[4].temperatureHigh));
-	$('.fut-weath .temp-low .day-4').html(Math.round(forecast.daily.data[4].temperatureLow));
-	$('.fut-weath .icon .day-4').html(displayIcon(forecast.daily.data[4].icon));
+	$('.fut-weath .day-4 .day').html(displayDay(4));
+	$('.fut-weath .day-4 .temp-high').html(Math.round(forecast.daily.data[4].temperatureHigh));
+	$('.fut-weath .day-4 .temp-low').html(Math.round(forecast.daily.data[4].temperatureLow));
+	$('.fut-weath .day-4 .icon').html(displayIcon(forecast.daily.data[4].icon));
 	
-	$('.fut-weath .temp-high .day-5').html(Math.round(forecast.daily.data[5].temperatureHigh));
-	$('.fut-weath .temp-low .day-5').html(Math.round(forecast.daily.data[5].temperatureLow));
-	$('.fut-weath .icon .day-5').html(displayIcon(forecast.daily.data[5].icon));
+	$('.fut-weath .day-5 .day').html(displayDay(5));
+	$('.fut-weath .day-5 .temp-high').html(Math.round(forecast.daily.data[5].temperatureHigh));
+	$('.fut-weath .day-5 .temp-low').html(Math.round(forecast.daily.data[5].temperatureLow));
+	$('.fut-weath .day-5 .icon').html(displayIcon(forecast.daily.data[5].icon));
 
-	$('.fut-weath .temp-high .day-6').html(Math.round(forecast.daily.data[6].temperatureHigh));
-	$('.fut-weath .temp-low .day-6').html(Math.round(forecast.daily.data[6].temperatureLow));
-	$('.fut-weath .icon .day-6').html(displayIcon(forecast.daily.data[6].icon));
+	$('.fut-weath .day-6 .day').html(displayDay(6));
+	$('.fut-weath .day-6 .temp-high').html(Math.round(forecast.daily.data[6].temperatureHigh));
+	$('.fut-weath .day-6 .temp-low').html(Math.round(forecast.daily.data[6].temperatureLow));
+	$('.fut-weath .day-6 .icon').html(displayIcon(forecast.daily.data[6].icon));
+
+
+	// $('.home .button').click(function(){
+	//   $('.home').addClass('hidden');
+	// })
+	$('.home .button').click(function(){
+	  $('header').removeClass('hidden');
+	})
+
+	$('header .main-content .weather .mo-info').click(function(){
+	  $('header').addClass('hidden');
+	})
+	$('header .main-content .weather .mo-info').click(function(){
+	  $('.more-info').removeClass('hidden');
+	})
+
+
+
+	$('.more-info .mo-info2').click(function(){
+	  $('header').removeClass('hidden');
+	})
+	$('.more-info .mo-info2').click(function(){
+	  $('.more-info').addClass('hidden');
+	})
 
 
 }
@@ -167,13 +192,13 @@ function displayDay(n){
 	var d = new Date();
 	var weekday = new Array();
 
-	weekday[0] = "S";
-	weekday[1] = "M";
-	weekday[2] = "T";
-	weekday[3] = "W";
-	weekday[4] = "T";
-	weekday[5] = "F";
-	weekday[6] = "S";
+	weekday[0] = "Sun";
+	weekday[1] = "Mon";
+	weekday[2] = "Tue";
+	weekday[3] = "Wed";
+	weekday[4] = "Thu";
+	weekday[5] = "Fri";
+	weekday[6] = "Sat";
 
 	var dispDay = d.getDay() + n;
 

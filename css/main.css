@@ -26,6 +26,22 @@ body {
   .home .button:hover {
     background-color: #55A6F8; }
 
+.more-info {
+  background-color: #43A1FF;
+  color: #000;
+  height: 91vh;
+  padding: 2em;
+  font-size: 1.2em; }
+  .more-info .mo-info2 {
+    background-color: #E5E5E5;
+    color: #000;
+    grid-row: 1;
+    grid-column: 2;
+    Justify-self: right;
+    padding: .5em 1em; }
+  .more-info .mo-info2:hover {
+    background-color: #55A6F8; }
+
 .home {
   height: 100vh;
   background-color: #535353;
@@ -45,54 +61,80 @@ body {
   .home .button:hover {
     background-color: #55A6F8; }
 
-header .main-content {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr); }
-  header .main-content .weather {
-    padding: 2em;
+header {
+  height: 100vh; }
+  header .main-content {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr); }
-    header .main-content .weather h1 {
-      grid-column: 1;
-      grid-row: 2;
-      align-self: end;
-      justify-self: right;
-      font-size: 4em;
-      margin: 0;
-      line-height: .5em; }
-    header .main-content .weather h2 {
-      grid-column: 1;
-      grid-row: 3;
-      justify-self: right;
-      font-size: 4em;
-      margin: 0;
-      color: #ccc; }
-    header .main-content .weather .icon {
+    grid-template-rows: 1fr, 1fr, 1fr; }
+    header .main-content .weather {
+      padding: 2em;
+      display: grid;
+      grid-template-rows: 1fr, 1fr, 2fr, 2fr;
+      grid-template-columns: repeat(2, 1fr); }
+      header .main-content .weather .day {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        font-size: 3em;
+        justify-self: center; }
+      header .main-content .weather h1 {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: end;
+        justify-self: right;
+        font-size: 4em;
+        margin: 0 .5em 0 0; }
+      header .main-content .weather h2 {
+        grid-column: 1;
+        grid-row: 4;
+        justify-self: right;
+        font-size: 4em;
+        margin: 0 .5em 0 0;
+        color: #ccc; }
+      header .main-content .weather .icon {
+        grid-column: 2;
+        grid-row: 3 / span 2;
+        align-self: center;
+        margin-left: 1em; }
+        header .main-content .weather .icon img {
+          width: 5em; }
+    header .main-content .mo-info {
+      background-color: #E5E5E5;
+      color: #000;
+      grid-row: 1;
       grid-column: 2;
-      grid-row: 2 / span 2;
-      align-self: center; }
-      header .main-content .weather .icon img {
-        width: 10em; }
-  header .main-content .button {
-    background-color: #E5E5E5;
-    color: #000;
-    grid-row: 1;
-    grid-column: 2;
-    Justify-self: right; }
-  header .main-content .button:hover {
-    background-color: #55A6F8; }
-  header .main-content p {
-    padding: 0;
-    margin: 0; }
-header .fut-weath {
-  font-size: 2em;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(3, 1fr); }
-  header .fut-weath .temp-low {
-    grid-column: 2; }
-  header .fut-weath .icon {
-    grid-column: 3; }
+      Justify-self: right;
+      padding: .5em 1em; }
+    header .main-content .mo-info:hover {
+      background-color: #55A6F8; }
+    header .main-content p {
+      padding: 0;
+      margin: 0; }
+  header .fut-weath {
+    font-size: 2em;
+    display: grid;
+    margin: 0 1em 0 1em;
+    grid-template-rows: repeat(6, 1fr); }
+    header .fut-weath .day-1, header .fut-weath .day-2, header .fut-weath .day-3, header .fut-weath .day-4, header .fut-weath .day-5, header .fut-weath .day-6 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); }
+      header .fut-weath .day-1 .day, header .fut-weath .day-2 .day, header .fut-weath .day-3 .day, header .fut-weath .day-4 .day, header .fut-weath .day-5 .day, header .fut-weath .day-6 .day {
+        justify-self: center;
+        align-self: center; }
+      header .fut-weath .day-1 .temp-high, header .fut-weath .day-2 .temp-high, header .fut-weath .day-3 .temp-high, header .fut-weath .day-4 .temp-high, header .fut-weath .day-5 .temp-high, header .fut-weath .day-6 .temp-high {
+        justify-self: center;
+        align-self: center;
+        grid-column: 2; }
+      header .fut-weath .day-1 .temp-low, header .fut-weath .day-2 .temp-low, header .fut-weath .day-3 .temp-low, header .fut-weath .day-4 .temp-low, header .fut-weath .day-5 .temp-low, header .fut-weath .day-6 .temp-low {
+        justify-self: center;
+        align-self: center;
+        grid-column: 3; }
+      header .fut-weath .day-1 .icon, header .fut-weath .day-2 .icon, header .fut-weath .day-3 .icon, header .fut-weath .day-4 .icon, header .fut-weath .day-5 .icon, header .fut-weath .day-6 .icon {
+        justify-self: center;
+        align-self: center;
+        grid-column: 4; }
+        header .fut-weath .day-1 .icon img, header .fut-weath .day-2 .icon img, header .fut-weath .day-3 .icon img, header .fut-weath .day-4 .icon img, header .fut-weath .day-5 .icon img, header .fut-weath .day-6 .icon img {
+          width: 1.5em; }
+  header .day-1, header .day-3, header .day-5 {
+    background-color: #3a3a3a; }
 
 /*# sourceMappingURL=main.css.map */

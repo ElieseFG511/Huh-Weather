@@ -1,0 +1,20 @@
+.more-info {
+	background-color: #43A1FF;
+	color: #000;
+	height: 91vh;
+	padding: 2em;
+	font-size: 1.2em;
+	
+	.mo-info2 {
+		background-color: #E5E5E5;
+		color: #000;
+		grid-row: 1;
+		grid-column: 2;
+		Justify-self: right;
+		padding: .5em 1em;
+	}
+
+	.mo-info2:hover {
+		background-color: #55A6F8;
+	}
+}
