@@ -150,10 +150,10 @@ function displayData(forecast){
 	  $('header').removeClass('hidden');
 	})
 
-	$('header .main-content .weather .mo-info').click(function(){
+	$('header .main-content .fut-weath .mo-info').click(function(){
 	  $('header').addClass('hidden');
 	})
-	$('header .main-content .weather .mo-info').click(function(){
+	$('header .main-content .fut-weath .mo-info').click(function(){
 	  $('.more-info').removeClass('hidden');
 	})
 

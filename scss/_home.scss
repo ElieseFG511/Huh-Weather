@@ -1,6 +1,7 @@
 header {
-	height: 100vh;
 	.main-content {
+		height: 100vh;
+
 		display: grid;
 		grid-template-rows: 1fr, 1fr, 1fr;	
 		.weather {
@@ -8,6 +9,8 @@ header {
 			display: grid;
 			grid-template-rows: 1fr, 1fr, 2fr, 2fr;
 			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 50%;
+			Margin-top: 35%;
 			.day {
 				grid-column: 1 / span 2;
 				grid-row: 2;
@@ -21,8 +24,7 @@ header {
 				justify-self: right;
 				font-size: 4em;
 				margin: 0 .5em 0 0;
-				// line-height: .5em;
-
+				font-weight: 700;
 			}
 			h2 {
 				grid-column: 1;
@@ -31,6 +33,7 @@ header {
 				font-size: 4em;
 				margin: 0 .5em 0 0;
 				color: #ccc;
+				font-weight: 700;
 			}
 			.icon {
 				grid-column: 2;
@@ -43,18 +46,6 @@ header {
 			}
 
 			}
-			.mo-info {
-			background-color: #E5E5E5;
-			color: #000;
-			grid-row: 1;
-			grid-column: 2;
-			Justify-self: right;
-			padding: .5em 1em;
-			}
-
-			.mo-info:hover {
-				background-color: #55A6F8;
-			}
 			p {
 				padding: 0;
 				margin: 0;
@@ -62,13 +53,14 @@ header {
 		}
 
 		.fut-weath {
+			height: 100vh;
 			font-size: $weath-font-s;
 			display: grid;
-			margin: 0 1em 0 1em;
-			grid-template-rows: repeat(6, 1fr);
+			grid-template-rows: repeat(7, 1fr);
 			.day-1, .day-2, .day-3, .day-4, .day-5, .day-6 {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
+				padding: .5em;
 				.day {
 					justify-self: center;
 					align-self: center;
@@ -92,6 +84,18 @@ header {
 						width: 1.5em;
 					}
 				}
+			}
+			.mo-info {
+			background-color: #E5E5E5;
+			color: #000;
+			grid-row: 7;
+			padding: .5em 1em;
+			width: 90%;
+			text-align: center;
+			}
+
+			.mo-info:hover {
+				background-color: #55A6F8;
 			}
 		}
 		.day-1, .day-3, .day-5 {
